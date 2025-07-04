@@ -1,4 +1,4 @@
-# Databricks MCP Server
+# Databricks MCP Server (Unofficial)
 
 A Model Context Protocol (MCP) server for executing Databricks SQL queries and comparing table data.
 
