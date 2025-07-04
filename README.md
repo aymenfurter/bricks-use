@@ -1,5 +1,7 @@
 # Databricks MCP Server (Unofficial)
 
+[![CI/CD Pipeline](https://github.com/aymenfurter/bricks-use/actions/workflows/ci.yml/badge.svg)](https://github.com/aymenfurter/bricks-use/actions/workflows/ci.yml)
+
 A Model Context Protocol (MCP) server for executing Databricks SQL queries and comparing table data.
 
 This project is purely meant for demo purpose, use at your own risk!
