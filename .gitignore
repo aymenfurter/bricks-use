@@ -1,0 +1,6 @@
+htmlcov
+data
+__pycache__
+.venv
+.pytest_cache
+.vscode

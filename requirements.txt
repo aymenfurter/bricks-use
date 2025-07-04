@@ -1,0 +1,7 @@
+fastmcp
+python-dotenv
+pandas
+databricks-sql-connector
+pytest
+pytest-asyncio
+pytest-mock
