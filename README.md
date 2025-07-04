@@ -2,6 +2,8 @@
 
 A Model Context Protocol (MCP) server for executing Databricks SQL queries and comparing table data.
 
+This project is purely meant for demo purpose, use at your own risk!
+
 ## Features
 
 - **Execute SQL Queries**: Run any SQL query on Databricks with configurable result limits
