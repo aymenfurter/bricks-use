@@ -17,26 +17,26 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [✨ Features](#-features)
-- [🚀 Quick Start](#-quick-start)
-- [⚙️ Setup](#️-setup)
-- [🛠️ Tools](#️-tools)
-- [💻 VS Code Integration](#-vs-code-integration)
-- [📖 Usage Examples](#-usage-examples)
-- [📄 License](#-license)
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Setup](#setup)
+- [Tools](#tools)
+- [VS Code Integration](#vs-code-integration)
+- [Usage Examples](#usage-examples)
+- [License](#license)
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---------|-------------|
-| 🗄️ **Execute SQL Queries** | Run any SQL query on Databricks with configurable result limits |
-| 📊 **Table Information** | Get detailed information about tables including schema and row counts |
-| 🔄 **Table Comparison** | Compare two tables by downloading their data and running CLI diff |
-| ⚡ **Quick Comparison** | Fast metadata-only comparison of tables |
+| **Execute SQL Queries** | Run any SQL query on Databricks with configurable result limits |
+| **Table Information** | Get detailed information about tables including schema and row counts |
+| **Table Comparison** | Compare two tables by downloading their data and running CLI diff |
+| **Quick Comparison** | Fast metadata-only comparison of tables |
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Clone and setup
@@ -54,42 +54,42 @@ cp .env.example .env  # Edit with your credentials
 python databricks_server.py
 ```
 
-## ⚙️ Setup
+## Setup
 
-### 📋 Prerequisites
+### Prerequisites
 
 <table>
 <tr>
-<td>🐍 <strong>Python</strong></td>
+<td><strong>Python</strong></td>
 <td>3.11 or higher</td>
 </tr>
 <tr>
-<td>🏢 <strong>Databricks</strong></td>
+<td><strong>Databricks</strong></td>
 <td>Workspace access</td>
 </tr>
 <tr>
-<td>🔑 <strong>Token</strong></td>
+<td><strong>Token</strong></td>
 <td>Personal access token</td>
 </tr>
 </table>
 
-### 🔧 Environment Variables
+### Environment Variables
 
 Set the following environment variables or create a `.env` file:
 
 ```bash
-# 🏢 Databricks Configuration
+# Databricks Configuration
 DATABRICKS_SERVER_HOSTNAME=your-workspace.cloud.databricks.com
 DATABRICKS_HTTP_PATH=/sql/1.0/warehouses/your-warehouse-id
 DATABRICKS_ACCESS_TOKEN=your-personal-access-token
 
-# 📊 Optional Settings
+# Optional Settings
 DATABRICKS_CATALOG=main                    # Defaults to 'main'
 DATABRICKS_SCHEMA=default                  # Defaults to 'default'
 DATABRICKS_TEMP_DIR=/tmp/databricks_mcp    # Temp directory
 ```
 
-### 💾 Installation
+### Installation
 
 1. **Create and activate a virtual environment:**
    ```bash
@@ -107,22 +107,22 @@ DATABRICKS_TEMP_DIR=/tmp/databricks_mcp    # Temp directory
    python databricks_server.py
    ```
 
-## 🛠️ Tools
+## Tools
 
 <div align="center">
 
 | Tool | Purpose | Key Parameters |
 |------|---------|----------------|
-| 🔍 `execute_query` | Execute SQL queries | `query`, `limit` |
-| ℹ️ `get_table_info` | Get table metadata | `table_name`, `catalog`, `schema` |
-| 🔄 `compare_tables` | Full data comparison | `table1`, `table2`, `diff_lines` |
-| ⚡ `quick_compare_tables` | Metadata comparison | `table1`, `table2` |
+| `execute_query` | Execute SQL queries | `query`, `limit` |
+| `get_table_info` | Get table metadata | `table_name`, `catalog`, `schema` |
+| `compare_tables` | Full data comparison | `table1`, `table2`, `diff_lines` |
+| `quick_compare_tables` | Metadata comparison | `table1`, `table2` |
 
 </div>
 
 ---
 
-### 🔍 execute_query
+### execute_query
 
 Execute a SQL query on Databricks.
 
@@ -130,12 +130,12 @@ Execute a SQL query on Databricks.
 > - `query` (str): SQL query to execute
 > - `limit` (int, optional): Maximum rows to return (default: 1000)
 
-**📝 Example:**
+**Example:**
 ```sql
 Execute this query: SELECT * FROM my_table WHERE status = 'active'
 ```
 
-### ℹ️ get_table_info
+### get_table_info
 
 Get information about a Databricks table.
 
@@ -144,12 +144,12 @@ Get information about a Databricks table.
 > - `catalog` (str, optional): Catalog name
 > - `schema` (str, optional): Schema name
 
-**📝 Example:**
+**Example:**
 ```
 Get info for table 'users' in catalog 'production' and schema 'analytics'
 ```
 
-### 🔄 compare_tables
+### compare_tables
 
 Compare data between two tables by downloading full data and running diff.
 
@@ -162,12 +162,12 @@ Compare data between two tables by downloading full data and running diff.
 > - `schema2` (str, optional): Schema for table2
 > - `diff_lines` (int, optional): Number of diff context lines (default: 10)
 
-**📝 Example:**
+**Example:**
 ```
 Compare tables 'users_old' and 'users_new' and show differences
 ```
 
-### ⚡ quick_compare_tables
+### quick_compare_tables
 
 Quick metadata-only comparison without downloading data.
 
@@ -179,17 +179,17 @@ Quick metadata-only comparison without downloading data.
 > - `catalog2` (str, optional): Catalog for table2
 > - `schema2` (str, optional): Schema for table2
 
-**📝 Example:**
+**Example:**
 ```
 Quick compare 'table_a' and 'table_b' schemas and row counts
 ```
 
-## 💻 VS Code MCP Integration
+## VS Code MCP Integration
 
 Add this configuration to your VS Code settings (`mcp.json`):
 
 <details>
-<summary>📄 <strong>Click to expand VS Code configuration</strong></summary>
+<summary><strong>Click to expand VS Code configuration</strong></summary>
 
 ```json
 {
@@ -243,9 +243,9 @@ Add this configuration to your VS Code settings (`mcp.json`):
 
 </details>
 
-## 📖 Usage Examples
+## Usage Examples
 
-### 🔍 Execute a Query
+### Execute a Query
 ```sql
 Execute this SQL query: SELECT customer_id, order_date, total_amount 
                        FROM orders 
@@ -253,12 +253,12 @@ Execute this SQL query: SELECT customer_id, order_date, total_amount
                        LIMIT 100
 ```
 
-### 🔄 Compare Tables
+### Compare Tables
 ```
 Compare tables 'sales_2023' and 'sales_2024' and show me the differences
 ```
 
-### ⚡ Quick Schema Comparison
+### Quick Schema Comparison
 ```
 Quick compare the schemas of 'old_users' and 'new_users' tables
 ```
@@ -267,7 +267,7 @@ Quick compare the schemas of 'old_users' and 'new_users' tables
 
 <div align="center">
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
