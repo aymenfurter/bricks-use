@@ -1,13 +1,14 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/aymenfurter/bricks-use/refs/heads/main/bricks-use.png" alt="Project Logo" width="720" />
+<img src="https://raw.githubusercontent.com/aymenfurter/bricks-use/refs/heads/main/bricks-use.png" alt="Project Logo" width="820" />
 
-[![CI/CD Pipeline](https://github.com/aymenfurter/bricks-use/actions/workflows/ci.yml/badge.svg)](https://github.com/aymenfurter/bricks-use/actions/workflows/ci.yml)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Type Checked: mypy](https://img.shields.io/badge/type%20checked-mypy-blue.svg)](https://mypy.readthedocs.io/)
-[![Databricks](https://img.shields.io/badge/Databricks-Compatible-red.svg)](https://databricks.com/)
+[![CI/CD Pipeline](https://img.shields.io/github/actions/workflow/status/aymenfurter/bricks-use/ci.yml?label=CI/CD&style=flat-square)](https://github.com/aymenfurter/bricks-use/actions/workflows/ci.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg?style=flat-square)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
+[![Type Checked: mypy](https://img.shields.io/badge/type%20checked-mypy-blue.svg?style=flat-square)](https://mypy.readthedocs.io/)
+[![Databricks](https://img.shields.io/badge/Databricks-Compatible-red.svg?style=flat-square)](https://databricks.com/)
+
 
 **A powerful Model Context Protocol (MCP) server for executing Databricks SQL queries and comparing table data.**
 
