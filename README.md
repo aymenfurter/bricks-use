@@ -1,6 +1,6 @@
-# 🧱 Databricks MCP Server (Unofficial)
-
 <div align="center">
+
+<img src="https://raw.githubusercontent.com/aymenfurter/bricks-use/refs/heads/main/bricks-use.png" alt="Project Logo" width="550" />
 
 [![CI/CD Pipeline](https://github.com/aymenfurter/bricks-use/actions/workflows/ci.yml/badge.svg)](https://github.com/aymenfurter/bricks-use/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
