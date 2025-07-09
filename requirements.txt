@@ -1,7 +1,8 @@
 fastmcp
 python-dotenv
 pandas
-databricks-sql-connector
+databricks-sql-connector[pyarrow]
 pytest
 pytest-asyncio
 pytest-mock
+argparse

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Databricks CLI wrapper script
+# Usage: ./db <command> <args...>
+
+# Get the directory of this script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Run the Python CLI with all arguments passed through
+python3 "$SCRIPT_DIR/cli.py" "$@"

@@ -41,6 +41,21 @@ clean:
 run:
 	python databricks_server.py
 
+# CLI commands
+cli-query:
+	python cli.py query "$(QUERY)"
+
+cli-info:
+	python cli.py info "$(TABLE)"
+
+cli-compare:
+	python cli.py compare "$(TABLE1)" "$(TABLE2)"
+
+# Make CLI executable
+setup-cli:
+	chmod +x cli.py
+	chmod +x bricks
+
 # Help
 help:
 	@echo "Available commands:"
@@ -54,3 +69,12 @@ help:
 	@echo "  dev-install    - Install development dependencies"
 	@echo "  clean          - Clean up temporary files"
 	@echo "  run            - Run the server"
+	@echo "  setup-cli      - Make CLI executable"
+	@echo "  cli-query      - Run query via CLI (set QUERY variable)"
+	@echo "  cli-info       - Get table info via CLI (set TABLE variable)"
+	@echo "  cli-compare    - Compare tables via CLI (set TABLE1 and TABLE2 variables)"
+	@echo ""
+	@echo "CLI Wrapper Usage:"
+	@echo "  ./bricks query \"SELECT * FROM table\""
+	@echo "  ./bricks info table_name"
+	@echo "  ./bricks compare table1 table2"
