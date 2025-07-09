@@ -66,8 +66,9 @@ def execute_query_cmd(args: argparse.Namespace, client: DatabricksService) -> in
             # Calculate column widths
             widths = [len(col) for col in columns]
             for row in rows:
-                for i, cell in enumerate(row):
-                    widths[i] = max(widths[i], len(str(cell)))
+                for i, col in enumerate(columns):
+                    cell_value = row.get(col, '')
+                    widths[i] = max(widths[i], len(str(cell_value)))
             
             # Print header
             header = ' | '.join(col.ljust(widths[i]) for i, col in enumerate(columns))
@@ -76,7 +77,8 @@ def execute_query_cmd(args: argparse.Namespace, client: DatabricksService) -> in
             
             # Print rows
             for row in rows:
-                print(' | '.join(str(cell).ljust(widths[i]) for i, cell in enumerate(row)))
+                row_values = [str(row.get(col, '')) for col in columns]
+                print(' | '.join(val.ljust(widths[i]) for i, val in enumerate(row_values)))
             
             print(f"\nReturned {len(rows)} rows.")
         
