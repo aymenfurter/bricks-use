@@ -5,3 +5,7 @@ __pycache__
 .pytest_cache
 .vscode
 .env
+
+# CI/CD artifacts
+coverage.xml
+.coverage.*
